@@ -1,6 +1,8 @@
 ### socialTech weThinkCode_
 
 
-#intallation
+# intallation
+
 `npm i express body-parser mongoose concurrently`
+
 `npm i -D`
