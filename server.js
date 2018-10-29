@@ -2,6 +2,9 @@ const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 
+//routing api's
+const products = require('./routes/api/products')
+
 const app = express()
 
 //body parser middleware
@@ -16,6 +19,8 @@ mongoose
     .then(() => console.log('Connected to MongoDB ...'))
     .catch(err => console.log(err));
 
+//use routes
+app.use('/api/products', products)
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => console.log(`Server started in port ${port}`));
