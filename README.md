@@ -1,7 +1,9 @@
-### socialTech weThinkCode_
+# socialTech weThinkCode_
 
 
-# intallation
+### intallation
+
+must have npm installed and node 
 
 `npm i express body-parser mongoose concurrently`
 
