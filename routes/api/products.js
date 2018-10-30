@@ -18,25 +18,23 @@ const Product = require('../../models/products')
 // @route   POST api/products
 // @desc    Create a product
 // @access  public
-router.post('/', (req, res) => {
+/*router.post('/', (req, res) => {
     //create in memory
     const newProduct = new Product({
         name: req.body.name
     });
-
     // save
     newProduct.save().then(product => res.json(product));
-}); // because we are already inside the required path
-
-
+}); // because we are already inside the required path 
+*/
 // DEL
 // @route   DEL api/products
 // @desc    Delete a product
 // @access  public
 router.delete('/:id', (req, res) => {
-    product.findById(req.params.id).then(product => remove()
-        .then(() => res.json({success: true})))
-        .catch(err => res.status(404).json({success: false}))
+    Products.findById(req.params.id)
+    .then(product => product.remove().then(() => res.json({success: true})))
+    .catch(err => res.status(404).json({success: false}))
 }); // because we are already inside the required path
 
-module.exports = router
+module.exports = router 
