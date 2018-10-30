@@ -34,10 +34,9 @@ router.post('/', (req, res) => {
 // @desc    Delete a product
 // @access  public
 router.delete('/:id', (req, res) => {
-    
     product.findById(req.params.id).then(product => remove()
         .then(() => res.json({success: true})))
-
+        .catch(err => res.status(404).json({success: false}))
 }); // because we are already inside the required path
 
 module.exports = router
