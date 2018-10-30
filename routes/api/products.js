@@ -36,7 +36,7 @@ router.post('/', (req, res) => {
 router.delete('/:id', (req, res) => {
     
     product.findById(req.params.id).then(product => remove()
-        .then(() => res.json({success: true}))
+        .then(() => res.json({success: true})))
 
 }); // because we are already inside the required path
 
